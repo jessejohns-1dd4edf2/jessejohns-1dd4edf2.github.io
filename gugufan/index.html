@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>咕咕番-咕咕番动漫追番平台_咕咕番新番更新与在线观看指南</title>
+<meta name="description" content="咕咕番是聚焦动漫追番与番剧更新的内容专题页，整理咕咕番新番更新时间、番剧类型分类、口碑推荐与追番顺序建议，帮助动漫观众快速找到想看的番剧、了解更新节奏与同类作品，适合追番党收藏与持续关注。">
+<meta name="keywords" content="咕咕番,咕咕番动漫,咕咕番新番,咕咕番追番,咕咕番在线观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff7a45'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E咕%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --gg-bg:#fffaf5;
+  --gg-card:#ffffff;
+  --gg-line:#f0e2d6;
+  --gg-main:#ff7a45;
+  --gg-main-deep:#e85f28;
+  --gg-ink:#2f2a26;
+  --gg-sub:#7a6d63;
+  --gg-soft:#fff3ea;
+  --gg-radius:16px;
+  --gg-shadow:0 6px 18px rgba(180,120,80,.10);
+  --gg-shadow-hover:0 12px 26px rgba(180,120,80,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+  background:var(--gg-bg);
+  color:var(--gg-ink);
+  line-height:1.75;
+  font-size:15px;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.gg-wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+.gg-sec{padding:38px 0}
+.gg-sec h2{
+  font-size:22px;letter-spacing:.5px;margin-bottom:6px;
+  display:flex;align-items:center;gap:10px;
+}
+.gg-sec h2::before{
+  content:"";width:6px;height:22px;border-radius:4px;
+  background:linear-gradient(180deg,var(--gg-main),#ffb37a);
+}
+.gg-sec .gg-lead{color:var(--gg-sub);font-size:13.5px;margin-bottom:22px}
+
+/* 导航 */
+.gg-nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,245,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--gg-line);
+}
+.gg-nav-in{display:flex;align-items:center;gap:18px;height:62px;flex-wrap:wrap}
+.gg-logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;color:var(--gg-main-deep)}
+.gg-logo-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,#ff9a5f,#ff5f2e);
+  color:#fff;display:grid;place-items:center;font-size:16px;font-weight:800;
+  box-shadow:0 4px 10px rgba(255,110,60,.35);
+}
+.gg-nav-links{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.gg-nav-links a{
+  padding:6px 11px;border-radius:9px;font-size:14px;color:var(--gg-sub);
+  transition:.2s;
+}
+.gg-nav-links a:hover{background:var(--gg-soft);color:var(--gg-main-deep)}
+.gg-nav-cta{
+  background:var(--gg-main);color:#fff;padding:8px 18px;border-radius:10px;
+  font-size:14px;font-weight:600;box-shadow:0 5px 14px rgba(255,122,69,.35);
+}
+.gg-nav-cta:hover{background:var(--gg-main-deep)}
+
+/* Banner */
+.gg-banner{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 320px at 12% -20%,#ffe4d2 0%,transparent 60%),
+    radial-gradient(700px 300px at 92% 0%,#ffeede 0%,transparent 55%),
+    linear-gradient(180deg,#fff7f0,#fffaf5);
+  border-bottom:1px solid var(--gg-line);
+}
+.gg-banner-in{padding:46px 0 40px;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:center}
+.gg-banner h1{font-size:34px;line-height:1.35;letter-spacing:.5px}
+.gg-banner h1 em{font-style:normal;color:var(--gg-main-deep)}
+.gg-banner p{color:var(--gg-sub);margin-top:14px;font-size:15px}
+.gg-banner-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.gg-banner-tags span{
+  background:#fff;border:1px solid var(--gg-line);color:var(--gg-sub);
+  font-size:12.5px;padding:4px 11px;border-radius:20px;
+}
+.gg-search{
+  margin-top:22px;display:flex;gap:10px;max-width:520px;
+  background:#fff;border:1px solid var(--gg-line);border-radius:14px;padding:7px 8px;
+  box-shadow:var(--gg-shadow);
+}
+.gg-search input{
+  flex:1;border:0;outline:0;background:transparent;padding:8px 10px;font-size:14px;color:var(--gg-ink);
+}
+.gg-search button{
+  border:0;cursor:pointer;background:var(--gg-main);color:#fff;
+  padding:9px 20px;border-radius:10px;font-size:14px;font-weight:600;
+}
+.gg-search button:hover{background:var(--gg-main-deep)}
+.gg-banner-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.gg-banner-actions a{
+  background:#fff;border:1px solid var(--gg-line);padding:8px 15px;border-radius:11px;
+  font-size:13.5px;color:var(--gg-ink);box-shadow:0 3px 9px rgba(180,120,80,.07);transition:.2s;
+}
+.gg-banner-actions a:hover{transform:translateY(-2px);border-color:#ffc9a8;color:var(--gg-main-deep)}
+.gg-banner-cover{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gg-cover{
+  border-radius:14px;height:104px;display:flex;align-items:flex-end;
+  padding:10px;color:#fff;font-size:12.5px;font-weight:600;
+  box-shadow:var(--gg-shadow);position:relative;overflow:hidden;
+}
+.gg-cover:nth-child(1){background:linear-gradient(135deg,#ff9a5f,#ff5f2e)}
+.gg-cover:nth-child(2){background:linear-gradient(135deg,#7fb8ff,#4d7cf0)}
+.gg-cover:nth-child(3){background:linear-gradient(135deg,#8fd6b5,#3fa57a)}
+.gg-cover:nth-child(4){background:linear-gradient(135deg,#c9a2ff,#8a5cf0)}
+.gg-cover span{position:relative;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.25)}
+.gg-cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.28));
+}
+
+/* 快捷分类 */
+.gg-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gg-cat{
+  background:var(--gg-card);border:1px solid var(--gg-line);border-radius:var(--gg-radius);
+  padding:16px;box-shadow:var(--gg-shadow);transition:.22s;
+}
+.gg-cat:hover{transform:translateY(-4px);box-shadow:var(--gg-shadow-hover)}
+.gg-cat b{display:block;font-size:15.5px;margin-bottom:4px}
+.gg-cat small{color:var(--gg-sub);font-size:12.5px;line-height:1.6;display:block}
+.gg-cat i{
+  font-style:normal;display:inline-block;margin-top:9px;font-size:12px;color:var(--gg-main-deep);
+  background:var(--gg-soft);padding:2px 9px;border-radius:20px;
+}
+
+/* 卡片通用 */
+.gg-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gg-card{
+  background:var(--gg-card);border:1px solid var(--gg-line);border-radius:var(--gg-radius);
+  padding:18px;box-shadow:var(--gg-shadow);transition:.22s;display:flex;flex-direction:column;
+}
+.gg-card:hover{transform:translateY(-4px);box-shadow:var(--gg-shadow-hover);border-color:#ffd7bd}
+.gg-card-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.gg-card h3{font-size:16px;line-height:1.5}
+.gg-score{font-size:12.5px;color:var(--gg-main-deep);font-weight:700;white-space:nowrap}
+.gg-tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.gg-tags span{font-size:11.5px;color:var(--gg-sub);background:var(--gg-soft);padding:2px 9px;border-radius:20px}
+.gg-card p{font-size:13.5px;color:var(--gg-sub);flex:1}
+.gg-card-foot{
+  margin-top:12px;padding-top:10px;border-top:1px dashed var(--gg-line);
+  font-size:12px;color:#a2938a;display:flex;justify-content:space-between;
+}
+
+/* 更新列表 */
+.gg-updates{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gg-up{
+  background:var(--gg-card);border:1px solid var(--gg-line);border-radius:13px;
+  padding:14px 16px;display:flex;gap:12px;align-items:flex-start;transition:.2s;
+}
+.gg-up:hover{border-color:#ffd7bd;box-shadow:var(--gg-shadow)}
+.gg-up-date{
+  flex:none;width:52px;text-align:center;background:var(--gg-soft);border-radius:9px;
+  padding:6px 0;color:var(--gg-main-deep);font-size:11.5px;line-height:1.3;font-weight:700;
+}
+.gg-up b{font-size:14.5px;display:block;margin-bottom:3px}
+.gg-up small{color:var(--gg-sub);font-size:12.8px}
+
+/* 正文 */
+.gg-article{
+  background:var(--gg-card);border:1px solid var(--gg-line);border-radius:20px;
+  padding:32px 34px;box-shadow:var(--gg-shadow);
+}
+.gg-article h3{font-size:17.5px;margin:22px 0 8px}
+.gg-article h3:first-child{margin-top:0}
+.gg-article p{color:#4a423c;margin-bottom:12px;font-size:14.6px}
+.gg-article strong{color:var(--gg-main-deep)}
+.gg-quote{
+  border-left:4px solid var(--gg-main);background:var(--gg-soft);
+  padding:12px 16px;border-radius:0 12px 12px 0;color:#5c5049;font-size:14px;margin:16px 0;
+}
+
+/* 体验指南 */
+.gg-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gg-guide-item{
+  background:#fff;border:1px solid var(--gg-line);border-radius:var(--gg-radius);
+  padding:18px;box-shadow:var(--gg-shadow);
+}
+.gg-guide-item b{display:block;margin-bottom:6px;font-size:15px;color:var(--gg-main-deep)}
+.gg-guide-item p{font-size:13.4px;color:var(--gg-sub)}
+
+/* FAQ */
+.gg-faq{display:grid;gap:12px}
+.gg-faq details{
+  background:#fff;border:1px solid var(--gg-line);border-radius:13px;
+  padding:14px 18px;box-shadow:0 3px 10px rgba(180,120,80,.06);
+}
+.gg-faq summary{
+  cursor:pointer;font-weight:600;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.gg-faq summary::-webkit-details-marker{display:none}
+.gg-faq summary::after{content:"＋";color:var(--gg-main);font-weight:700;transition:.2s}
+.gg-faq details[open] summary::after{content:"－"}
+.gg-faq p{margin-top:10px;color:var(--gg-sub);font-size:14px}
+
+/* 评论 */
+.gg-comments{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gg-cmt{
+  background:#fff;border:1px solid var(--gg-line);border-radius:13px;padding:14px 16px;
+  box-shadow:0 3px 9px rgba(180,120,80,.05);
+}
+.gg-cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.gg-avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,#ffb37a,#ff7a45);
+  color:#fff;font-size:12.5px;display:grid;place-items:center;font-weight:700;
+}
+.gg-cmt-head b{font-size:13.5px}
+.gg-cmt-head small{color:#b3a69b;font-size:11.5px;margin-left:auto}
+.gg-cmt p{font-size:13.6px;color:#524941}
+
+/* 资讯 */
+.gg-news{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.gg-news-item{
+  background:#fff;border:1px solid var(--gg-line);border-radius:14px;padding:16px 18px;
+  box-shadow:var(--gg-shadow);transition:.2s;
+}
+.gg-news-item:hover{transform:translateY(-3px);box-shadow:var(--gg-shadow-hover)}
+.gg-news-item time{font-size:12px;color:#b3a69b}
+.gg-news-item b{display:block;margin:6px 0;font-size:15px;line-height:1.5}
+.gg-news-item p{font-size:13.4px;color:var(--gg-sub)}
+
+/* 订阅 */
+.gg-sub{
+  background:linear-gradient(120deg,#ff8a52,#ff5f2e);
+  border-radius:22px;padding:34px;color:#fff;text-align:center;
+  box-shadow:0 14px 34px rgba(255,110,60,.28);
+}
+.gg-sub h2{justify-content:center;color:#fff}
+.gg-sub h2::before{background:#fff}
+.gg-sub p{opacity:.92;margin:8px 0 18px;font-size:14px}
+.gg-sub-form{display:flex;gap:10px;max-width:440px;margin:0 auto;background:rgba(255,255,255,.18);padding:7px;border-radius:13px}
+.gg-sub-form input{flex:1;border:0;background:transparent;outline:0;padding:8px 12px;color:#fff;font-size:14px}
+.gg-sub-form input::placeholder{color:rgba(255,255,255,.75)}
+.gg-sub-form button{border:0;background:#fff;color:var(--gg-main-deep);font-weight:700;padding:9px 20px;border-radius:10px;cursor:pointer}
+
+/* 页脚 */
+.gg-footer{background:#2f2a26;color:#c9bdb3;padding:36px 0 22px;margin-top:20px}
+.gg-footer-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+.gg-footer h4{color:#fff;font-size:15px;margin-bottom:10px}
+.gg-footer p,.gg-footer a{font-size:13px;color:#b8ada4;line-height:1.9}
+.gg-footer a:hover{color:#ffb37a}
+.gg-footer-links{display:flex;flex-wrap:wrap;gap:8px 16px}
+.gg-copy{margin-top:24px;padding-top:16px;border-top:1px solid #443d38;font-size:12.5px;color:#9a8f86;text-align:center}
+
+@media(max-width:900px){
+  .gg-banner-in{grid-template-columns:1fr;gap:24px}
+  .gg-banner h1{font-size:27px}
+  .gg-cats{grid-template-columns:repeat(2,1fr)}
+  .gg-cards{grid-template-columns:repeat(2,1fr)}
+  .gg-updates,.gg-comments,.gg-news{grid-template-columns:1fr}
+  .gg-guide{grid-template-columns:1fr}
+  .gg-footer-in{grid-template-columns:1fr}
+  .gg-article{padding:22px}
+}
+@media(max-width:560px){
+  .gg-cats,.gg-cards{grid-template-columns:1fr}
+  .gg-banner-cover{grid-template-columns:1fr 1fr}
+  .gg-nav-links{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="gg-nav">
+  <div class="gg-wrap gg-nav-in">
+    <a class="gg-logo" href="/#gg-top">
+      <span class="gg-logo-mark">咕</span>咕咕番
+    </a>
+    <nav class="gg-nav-links">
+      <a href="/#gg-hot">热门推荐</a>
+      <a href="/#gg-update">新番更新</a>
+      <a href="/#gg-cat">番剧分类</a>
+      <a href="/#gg-deep">深度解析</a>
+      <a href="/#gg-guide">追番指南</a>
+      <a href="/#gg-faq">常见问题</a>
+      <a href="/#gg-news">番剧资讯</a>
+      <a href="/#gg-comment">观众评论</a>
+    </nav>
+    <a class="gg-nav-cta" href="/#gg-sub">订阅更新</a>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="gg-banner" id="gg-top">
+  <div class="gg-wrap gg-banner-in">
+    <div>
+      <h1>咕咕番：动漫追番与<em>新番更新</em>内容专题</h1>
+      <p>咕咕番把当季新番、经典旧番与口碑番剧整理成清晰的追番路径，方便你按类型、热度和更新节奏找到想看的作品。</p>
+      <p>无论是想补一部高口碑番，还是想跟上每周更新节奏，都能在这里找到对应的分类入口、看点解读与推荐清单。</p>
+      <div class="gg-banner-tags">
+        <span>新番速递</span>
+        <span>口碑番剧</span>
+        <span>追番顺序</span>
+        <span>类型分类</span>
+        <span>完结补番</span>
+      </div>
+      <form class="gg-search" onsubmit="return false;">
+        <input type="text" placeholder="搜索番剧名、类型或关键词，如：咕咕番 新番">
+        <button type="submit">搜索</button>
+      </form>
+      <div class="gg-banner-actions">
+        <a href="/#gg-hot">热门推荐</a>
+        <a href="/#gg-update">今日更新</a>
+        <a href="/#gg-cat">分类索引</a>
+        <a href="/#gg-deep">深度解析</a>
+        <a href="/#gg-faq">追番答疑</a>
+      </div>
+    </div>
+    <div class="gg-banner-cover">
+      <div class="gg-cover"><span>当季新番速览</span></div>
+      <div class="gg-cover"><span>高分补番清单</span></div>
+      <div class="gg-cover"><span>原创番专题</span></div>
+      <div class="gg-cover"><span>剧场版精选</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 快捷分类 -->
+<section class="gg-sec" id="gg-cat">
+  <div class="gg-wrap">
+    <h2>咕咕番分类入口</h2>
+    <p class="gg-lead">按题材与观看需求划分的八个入口，先确定方向再挑番，比漫无目的地翻列表更省时间。</p>
+    <div class="gg-cats">
+      <a class="gg-cat" href="/#gg-hot"><b>热血战斗番</b><small>成长线清晰、打斗节奏紧凑，适合一次连看多集。</small><i>高燃</i></a>
+      <a class="gg-cat" href="/#gg-hot"><b>日常治愈番</b><small>生活流叙事，情绪平稳，适合碎片时间放松观看。</small><i>解压</i></a>
+      <a class="gg-cat" href="/#gg-hot"><b>悬疑推理番</b><small>信息密度高，需要留意伏笔与线索的排列方式。</small><i>烧脑</i></a>
+      <a class="gg-cat" href="/#gg-update"><b>当季新番</b><small>按周更新追踪，适合想跟上讨论节奏的观众。</small><i>追更</i></a>
+      <a class="gg-cat" href="/#gg-update"><b>完结补番</b><small>一次性看完，不用等更新，适合集中时间刷完。</small><i>一口气</i></a>
+      <a class="gg-cat" href="/#gg-hot"><b>科幻设定番</b><small>世界观完整，设定说明与剧情推进相辅相成。</small><i>硬核</i></a>
+      <a class="gg-cat" href="/#gg-deep"><b>原创动画</b><small>没有原作参照，剧情走向更难预判，讨论度高。</small><i>未知</i></a>
+      <a class="gg-cat" href="/#gg-deep"><b>剧场版专区</b><small>单部成篇，时长集中，适合想快速体验的观众。</small><i>单片</i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="gg-sec" id="gg-hot">
+  <div class="gg-wrap">
+    <h2>咕咕番热门番剧推荐</h2>
+    <p class="gg-lead">以下为专题页编辑整理的推荐卡片，覆盖不同题材与观看节奏，可根据自己的偏好挑选起点。</p>
+    <div class="gg-cards">
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>星轨列车</h3><span class="gg-score">9.2</span></div>
+        <div class="gg-tags"><span>科幻</span><span>群像</span><span>剧情向</span></div>
+        <p>以星际列车为舞台展开的群像叙事，每一站引入新乘客，也推进一层世界观，适合喜欢慢热设定的观众。</p>
+        <div class="gg-card-foot"><span>更新至 12 话</span><span>热度 98.6 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>午后甜点部</h3><span class="gg-score">8.8</span></div>
+        <div class="gg-tags"><span>日常</span><span>治愈</span><span>轻百合</span></div>
+        <p>围绕甜点部活动展开的校园日常，节奏轻快，画面色调柔和，适合下班后想放松情绪的观众。</p>
+        <div class="gg-card-foot"><span>更新至 9 话</span><span>热度 74.1 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>墨色侦探社</h3><span class="gg-score">9.0</span></div>
+        <div class="gg-tags"><span>悬疑</span><span>推理</span><span>单元剧</span></div>
+        <p>单元案件与主线谜题交错推进，线索铺陈克制，适合喜欢自己先推理再看解答的观众。</p>
+        <div class="gg-card-foot"><span>更新至 7 话</span><span>热度 81.5 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>剑与雪原</h3><span class="gg-score">8.6</span></div>
+        <div class="gg-tags"><span>热血</span><span>战斗</span><span>成长</span></div>
+        <p>主角从边缘剑士成长为队伍核心，战斗分镜扎实，前六话节奏偏慢，第七话后明显提速。</p>
+        <div class="gg-card-foot"><span>更新至 15 话</span><span>热度 92.3 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>海边旧邮局</h3><span class="gg-score">8.9</span></div>
+        <div class="gg-tags"><span>剧情</span><span>成长</span><span>治愈</span></div>
+        <p>以一封封寄错的信为线索，串起小镇居民的往事，叙事克制，情绪落点集中在后半段。</p>
+        <div class="gg-card-foot"><span>已完结</span><span>热度 63.8 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>机械之心</h3><span class="gg-score">8.7</span></div>
+        <div class="gg-tags"><span>机甲</span><span>科幻</span><span>原创</span></div>
+        <p>原创机甲番，设定说明密度较高，机甲作画投入明显，适合对机械设定感兴趣的观众。</p>
+        <div class="gg-card-foot"><span>更新至 10 话</span><span>热度 79.6 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>猫町夜行</h3><span class="gg-score">8.4</span></div>
+        <div class="gg-tags"><span>奇幻</span><span>短篇</span><span>氛围</span></div>
+        <p>每集一个短故事的奇幻小品，画风偏手绘，叙事轻巧，适合作为睡前观看的轻松选择。</p>
+        <div class="gg-card-foot"><span>更新至 6 话</span><span>热度 45.2 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>逆风球场</h3><span class="gg-score">8.9</span></div>
+        <div class="gg-tags"><span>运动</span><span>青春</span><span>热血</span></div>
+        <p>体育番的典型结构，但人物刻画扎实，比赛节奏控制得当，对不常看运动番的人也友好。</p>
+        <div class="gg-card-foot"><span>更新至 18 话</span><span>热度 87.9 万</span></div>
+      </article>
+      <article class="gg-card">
+        <div class="gg-card-top"><h3>雾都药剂师</h3><span class="gg-score">8.5</span></div>
+        <div class="gg-tags"><span>奇幻</span><span>职业</span><span>单元剧</span></div>
+        <p>以药剂师职业为核心展开的奇幻单元剧，每集解决一个具体问题，主线在中期逐渐浮出水面。</p>
+        <div class="gg-card-foot"><span>更新至 11 话</span><span>热度 68.4 万</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="gg-sec" id="gg-update">
+  <div class="gg-wrap">
+    <h2>咕咕番新番更新动态</h2>
+    <p class="gg-lead">以下更新信息按 2026 年 11 月 7 日的追番节奏整理，方便对照本周更新安排。</p>
+    <div class="gg-updates">
+      <div class="gg-up"><div class="gg-up-date">11/07<br>周五</div><div><b>星轨列车 第12话</b><small>新一站剧情展开，群像关系出现新的分歧点。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/07<br>周五</div><div><b>午后甜点部 第9话</b><small>社团活动篇收尾，节奏轻松，适合放松观看。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/06<br>周四</div><div><b>墨色侦探社 第7话</b><small>主线线索首次明确，单元案件开始与主线呼应。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/06<br>周四</div><div><b>剑与雪原 第15话</b><small>主角团迎来阶段性对决，战斗作画投入明显。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/05<br>周三</div><div><b>机械之心 第10话</b><small>设定说明集中释放，机甲战分镜密度提升。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/05<br>周三</div><div><b>雾都药剂师 第11话</b><small>职业线剧情推进，主线伏笔小幅回收。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/04<br>周二</div><div><b>海边旧邮局 全话完结</b><small>完结篇情绪落点集中，适合一次性补完。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/04<br>周二</div><div><b>逆风球场 第18话</b><small>关键比赛进入下半场，队伍配合出现变化。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/03<br>周一</div><div><b>猫町夜行 第6话</b><small>短篇故事独立成篇，氛围依旧是主要看点。</small></div></div>
+      <div class="gg-up"><div class="gg-up-date">11/03<br>周一</div><div><b>新番预告汇总</b><small>下季新番首播时间与题材分布初步整理。</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="gg-sec" id="gg-intro">
+  <div class="gg-wrap">
+    <h2>咕咕番专题内容简介</h2>
+    <p class="gg-lead">先了解这个专题页解决什么问题，再决定从哪个板块开始浏览。</p>
+    <div class="gg-article">
+      <p>咕咕番这个专题页面向的是有明确追番需求的动漫观众。很多人在选番时遇到的问题并不是"没有番可看"，而是信息太散：新番更新时间记不住、类型标签看不懂、口碑评价分布在各个角落、补番顺序也没有参考。这个页面把这些零散信息重新组织成可浏览的结构，让你从"想找一部番"到"确定看哪部、什么时候看"的路径更短一些。</p>
+      <p>页面适合三类人。第一类是当季追更党，需要知道每周哪几天有新话、哪些作品值得优先追；第二类是补番党，想按题材或口碑一次性找齐一批完结作品；第三类是偶尔看看的轻度观众，不追求追更，只想在有限时间里挑一部质量稳定的番。针对这三类需求，页面分别设置了更新动态、分类入口和口碑推荐模块。</p>
+      <p>内容价值主要体现在三个层面：一是把番剧按题材、观看节奏和受众偏好做了归类，减少选择成本；二是每部作品给出简短看点说明，而不是只堆标题；三是在深度解析部分解释"为什么这类番值得看"，帮助读者建立自己的判断标准，而不是被动接受榜单。</p>
+      <p>如果你只是随便看看，可以从热门推荐开始；如果你想跟上每周更新，可以看新番更新动态；如果你正在补番，建议先看分类入口再进入深度解析。页面结构本身就是一条浏览路径，收藏之后下次回来也能快速定位到上次关注的板块。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="gg-sec" id="gg-deep">
+  <div class="gg-wrap">
+    <h2>咕咕番深度解析：追番到底该看什么</h2>
+    <p class="gg-lead">从题材特点、叙事节奏到受众匹配，拆解选番时最容易被忽略的几个判断维度。</p>
+    <div class="gg-article">
+      <h3>一、题材标签只是入口，不是结论</h3>
+      <p>很多观众在咕咕番这类专题页选番时，第一反应是看题材标签：热血、日常、悬疑、科幻。标签确实能快速缩小范围，但它只说明作品的外壳，不说明它好不好看。同样是"热血战斗"，有的作品靠作画和分镜撑起观感，有的作品靠人物关系和成长线打动人，还有的作品两者都不突出，只靠节奏快。判断一部番是否适合自己，至少要看标签之外的两层信息：<strong>它的叙事重心放在哪里，以及它的节奏是否匹配你的观看习惯</strong>。</p>
+      <h3>二、节奏感比评分更能决定观看体验</h3>
+      <p>评分是群体平均值，节奏是个体体验。一部 9 分番如果前六话都在铺设定，对习惯一口气看完的观众来说可能很难坚持；一部 8 分番如果每集都有明确推进，反而更容易看下去。咕咕番专题页在推荐卡片里标注更新进度和简短看点，目的就是让读者在点开之前对节奏有个预期。追更党和补番党对节奏的容忍度完全不同，前者可以接受慢热，后者更在意单位时间的剧情密度。</p>
+      <div class="gg-quote">选番的实用顺序建议：先确定自己这次想要的情绪（放松、紧张、感动），再按题材筛选，最后看更新状态决定是追更还是补完。</div>
+      <h3>三、人物塑造决定作品能不能被记住</h3>
+      <p>作画和音乐决定第一印象，人物决定长期记忆。回头看那些被反复讨论的番剧，几乎都有一两个立得住的人物：动机清楚、行为一致、在关键节点做出符合性格的选择。原创动画尤其如此，因为没有原作参照，观众对人物弧光的期待会更高。专题页在解析部分强调人物分析，是因为这比罗列剧情梗概更有参考价值——剧情可以一句话概括，人物关系却需要具体展开。</p>
+      <h3>四、同类作品比较要找差异点，不是找相似点</h3>
+      <p>很多人补番时会问"有没有类似某某番的作品"。这个问法容易得到一堆表面相似、实际观感差异很大的推荐。更有效的比较方式是找差异点：同样是群像叙事，有的作品靠多线并行制造信息量，有的作品靠单线深入刻画个体；同样是治愈日常，有的作品强调氛围，有的作品强调人物互动。咕咕番专题页在分类入口里把题材和观看节奏分开标注，就是为了让读者按差异点筛选，而不是按标签堆叠。</p>
+      <h3>五、搜索"咕咕番"的人通常想了解什么</h3>
+      <p>从搜索意图看，关注咕咕番的用户大多集中在几个具体问题上：当季有哪些新番值得追、某部作品的更新节奏如何、有没有口碑稳定的补番清单、不同类型番剧该怎么入门。这类需求的共同点是<strong>需要结构化信息，而不是零散讨论</strong>。因此专题页的内容组织以分类、清单、更新动态和问答为主，尽量让读者在一次浏览中完成"了解—筛选—决定"的完整流程，减少反复跳转的成本。</p>
+      <p>最后提醒一点：任何榜单和推荐都只是参考，追番本身是件很个人化的事。有人看重作画，有人看重剧情，有人只想要下饭的轻松番。咕咕番专题页能提供的是信息框架和判断维度，最终选哪部，还是要回到自己的观看偏好上。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="gg-sec" id="gg-guide">
+  <div class="gg-wrap">
+    <h2>咕咕番浏览与追番体验指南</h2>
+    <p class="gg-lead">页面结构、筛选方式和移动端体验都围绕"减少无效翻找"设计。</p>
+    <div class="gg-guide">
+      <div class="gg-guide-item"><b>结构清晰</b><p>导航、分类、更新、深度解析、问答依次排列，从快速浏览到深入阅读有明确层次，不需要来回滚动找入口。</p></div>
+      <div class="gg-guide-item"><b>分类筛选方便</b><p>按题材和观看节奏双重分类，先确定情绪需求再选类型，比单纯按热度排序更贴近真实选番过程。</p></div>
+      <div class="gg-guide-item"><b>移动端友好</b><p>卡片和列表在手机上自动转为单列，字号和间距经过调整，通勤路上浏览更新动态也不吃力。</p></div>
+      <div class="gg-guide-item"><b>适合追更与收藏</b><p>更新动态按日期排列，方便对照本周安排；专题页可作为长期入口收藏，下次回来快速定位。</p></div>
+      <div class="gg-guide-item"><b>推荐扩展浏览路径</b><p>每张推荐卡片都带类型标签和简短看点，看到感兴趣的可以直接进入对应分类，不需要重新搜索。</p></div>
+      <div class="gg-guide-item"><b>信息密度适中</b><p>卡片说明控制在两三行，正文解析展开更细，快速浏览和深度阅读都能找到合适的内容颗粒度。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="gg-sec" id="gg-faq">
+  <div class="gg-wrap">
+    <h2>咕咕番常见问题</h2>
+    <p class="gg-lead">围绕选番、追更、补番顺序整理的常见疑问，按需展开查看。</p>
+    <div class="gg-faq">
+      <details open>
+        <summary>咕咕番专题页主要解决什么需求？</summary>
+        <p>主要是把分散的番剧信息整理成可浏览的结构，包括当季新番更新动态、按题材划分的分类入口、口碑推荐清单和追番顺序建议。适合想快速确定看什么、什么时候看的观众，减少在多个页面之间反复搜索的时间成本。</p>
+      </details>
+      <details>
+        <summary>第一次追番应该从哪种类型入手？</summary>
+        <p>建议先确定这次想要的情绪：想放松就选日常治愈类，想紧张就选悬疑推理类，想燃就选热血战斗类。确定情绪后再看更新状态，时间充裕选完结番一次性看完，时间零散选当季新番按周追。不要一上来就挑战设定密度很高的作品，容易劝退。</p>
+      </details>
+      <details>
+        <summary>当季新番和完结补番该怎么选？</summary>
+        <p>当季新番的优势是能跟上讨论节奏，劣势是每周只能看一集，情绪容易断；完结补番的优势是可以控制观看节奏，一口气看完体验更完整。如果你习惯参与讨论、喜欢猜剧情，选当季新番；如果你更看重完整叙事体验，选完结补番更合适。</p>
+      </details>
+      <details>
+        <summary>评分高的番一定适合自己吗？</summary>
+        <p>不一定。评分反映的是群体平均偏好，节奏慢、设定复杂的作品往往评分偏高，但对追求轻松观看的观众并不友好。建议把评分当作筛选门槛而不是唯一标准，同时看类型标签和简短看点，判断叙事重心和节奏是否匹配自己的习惯。</p>
+      </details>
+      <details>
+        <summary>原创动画和改编动画有什么区别？</summary>
+        <p>原创动画没有原作参照，剧情走向更难预判，讨论度和话题性通常更高，但也存在后期收束不稳的风险；改编动画有原作基础，整体结构相对稳妥，但改编质量取决于制作方对原作的取舍。喜欢未知感和讨论氛围选原创，追求稳定体验选改编。</p>
+      </details>
+      <details>
+        <summary>怎么判断一部番的更新节奏是否适合追更？</summary>
+        <p>看前几话的信息密度和每集结尾的钩子设置。如果每集都有明确推进和悬念收尾，适合追更；如果前几话主要在铺设定、单集信息量偏低，更适合等完结后一次性补完。专题页更新动态里标注的简短看点可以作为判断参考。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="gg-sec" id="gg-comment">
+  <div class="gg-wrap">
+    <h2>咕咕番观众评论</h2>
+    <p class="gg-lead">来自追番观众的近期讨论，包含推荐、吐槽和观感记录。</p>
+    <div class="gg-comments">
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">阿</span><b>阿岚不熬夜</b><small>10-18</small></div><p>星轨列车前几话确实慢，但撑到第八话之后世界观一下子立起来了，群像戏的分配也挺平均，没有明显工具人。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">柚</span><b>柚子汽水</b><small>10-19</small></div><p>午后甜点部就是那种不用动脑的番，画面颜色很舒服，下班回来一集正好，缺点是剧情确实没什么推进。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">墨</span><b>墨鱼丸</b><small>10-20</small></div><p>墨色侦探社的线索铺得挺克制，第七话主线出来之后回头再看前面的单元案件，伏笔确实埋了不少。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">北</span><b>北岸风</b><small>10-21</small></div><p>剑与雪原战斗作画可以，但前六话节奏真的偏慢，我是硬撑过去的，第七话之后才觉得值。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">夏</span><b>夏天的猫</b><small>10-22</small></div><p>海边旧邮局完结了，最后一集情绪收得挺好，没有强行煽情，推荐一次性补完，分集看可能没那个感觉。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">机</span><b>机械宅老陈</b><small>10-23</small></div><p>机械之心的机甲设定说明有点多，第一话信息量偏大，但作画投入是真的能看出来，喜欢机设的可以忍一忍。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">夜</span><b>夜行列车</b><small>10-24</small></div><p>猫町夜行适合睡前看，每集一个独立故事，氛围是主要看点，剧情不用太较真，当成小短篇看挺舒服。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">球</span><b>球场边的我</b><small>10-25</small></div><p>逆风球场虽然是标准体育番结构，但人物动机写得很实在，不是那种空喊口号的类型，比赛节奏也控制得不错。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">药</span><b>雾都小药童</b><small>10-26</small></div><p>雾都药剂师的职业线挺有意思，每集解决一个具体问题，主线在中期才开始露头，适合喜欢单元剧的人。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">一</span><b>一口气补完</b><small>10-27</small></div><p>这个专题页的分类挺省事，按观看节奏分比单纯按题材分更贴近实际，我补番都是先看完结再挑类型。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">评</span><b>评分仅供参考</b><small>10-28</small></div><p>评分看看就好，有些 8.5 的番我觉得比 9 分的还好看，节奏合不合拍比分数重要多了。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">追</span><b>追更中队长</b><small>10-29</small></div><p>更新动态那个模块挺实用，按日期排好，对照自己追的几部挺方便，希望后面能加上首播时间。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">原</span><b>原创党路过</b><small>10-30</small></div><p>原创番就是赌，赌赢了讨论度爆炸，赌输了后期收不住，但这个过程本身挺有意思，比改编番有悬念。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">下</span><b>下饭番收集者</b><small>11-01</small></div><p>日常治愈类我基本全收，不追求剧情密度，就想吃饭的时候看点轻松的，甜点部这种正好。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">设</span><b>设定控</b><small>11-02</small></div><p>科幻设定番最怕设定说不清楚，星轨列车这点做得不错，每站都补一点世界观，不会一口气砸给你。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">吐</span><b>吐槽不大王</b><small>11-03</small></div><p>机械之心第一话那个说明密度确实劝退，我差点弃了，后面节奏好一些，但开局处理可以再优化。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">剧</span><b>剧场版爱好者</b><small>11-04</small></div><p>希望专题页剧场版专区能多更新一些单片推荐，TV 番追起来太耗时间，剧场版更适合我这种时间少的。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">新</span><b>新番观察员</b><small>11-05</small></div><p>下季新番预告汇总那个挺有用，提前知道题材分布，可以先把想追的排个优先级，避免开播后手忙脚乱。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">中</span><b>中评不站队</b><small>11-06</small></div><p>整体推荐质量还行，但有几部看点和实际观感有差距，建议加个"适合人群"标签会更直接。</p></div>
+      <div class="gg-cmt"><div class="gg-cmt-head"><span class="gg-avatar">收</span><b>收藏夹吃灰</b><small>11-07</small></div><p>收藏这个页面了，主要是分类和更新动态够集中，不用每次都翻好几个地方，回头补番直接从这里进。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="gg-sec" id="gg-news">
+  <div class="gg-wrap">
+    <h2>咕咕番相关资讯</h2>
+    <p class="gg-lead">围绕番剧动态、题材趋势和更新安排的近期资讯摘要。</p>
+    <div class="gg-news">
+      <div class="gg-news-item"><time>2026-11-06</time><b>下季新番题材分布初步整理：奇幻与日常占比上升</b><p>从已公布的首播安排看，下季奇幻类和日常治愈类作品数量明显增加，科幻与悬疑题材相对收缩，追更选择可以提前规划。</p></div>
+      <div class="gg-news-item"><time>2026-11-05</time><b>星轨列车进入后半程，群像关系迎来关键分歧</b><p>第十二话之后主要人物的立场开始分化，后续剧情重心预计从世界观展开转向人物冲突，适合重新评估是否继续追更。</p></div>
+      <div class="gg-news-item"><time>2026-11-04</time><b>海边旧邮局完结，情绪落点集中在最终话</b><p>完结篇没有采用开放式结局，整体收束较为完整，适合一次性补完，分集观看可能削弱最终话的情绪累积效果。</p></div>
+      <div class="gg-news-item"><time>2026-11-03</time><b>原创动画讨论热度上升，观众更关注后期收束能力</b><p>近期原创番的讨论焦点从"设定是否有新意"转向"后期能否稳住"，观众对结尾质量的敏感度明显提高。</p></div>
+      <div class="gg-news-item"><time>2026-11-02</time><b>补番清单更新：完结作品按观看时长重新排序</b><p>专题页补番入口调整了排序逻辑，从原来按评分排序改为按总观看时长分组，方便根据可用时间选择合适作品。</p></div>
+      <div class="gg-news-item"><time>2026-11-01</time><b>运动番逆风球场赛程进入关键阶段</b><p>第十八话之后比赛进入下半场，队伍配合出现调整，后续几话将集中呈现战术变化与人物成长线。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="gg-sec" id="gg-sub">
+  <div class="gg-wrap">
+    <div class="gg-sub">
+      <h2>订阅咕咕番更新提醒</h2>
+      <p>留下邮箱，获取当季新番更新动态与补番清单的定期整理，不再错过想追的番。</p>
+      <form class="gg-sub-form" onsubmit="return false;">
+        <input type="email" placeholder="请输入你的邮箱地址">
+        <button type="submit">订阅</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="gg-footer">
+  <div class="gg-wrap">
+    <div class="gg-footer-in">
+      <div>
+        <h4>关于咕咕番专题</h4>
+        <p>咕咕番是聚焦动漫追番与新番更新的内容专题页，整理分类入口、更新动态、口碑推荐与追番顺序建议，帮助动漫观众更高效地选择与跟进作品。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <div class="gg-footer-links">
+          <a href="/#gg-hot">热门推荐</a>
+          <a href="/#gg-update">新番更新</a>
+          <a href="/#gg-cat">番剧分类</a>
+          <a href="/#gg-deep">深度解析</a>
+          <a href="/#gg-guide">追番指南</a>
+          <a href="/#gg-faq">常见问题</a>
+          <a href="/#gg-news">番剧资讯</a>
+          <a href="/#gg-comment">观众评论</a>
+        </div>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <p>动漫资讯站占位 · 追番社区占位 · 番剧数据库占位 · 声优资料站占位</p>
+        <p style="margin-top:8px;color:#8f847b;font-size:12.5px;">免责声明：本页内容为主题信息整理，番剧信息与更新安排以官方发布为准。</p>
+      </div>
+    </div>
+    <div class="gg-copy">© 2026 咕咕番专题页 · 内容仅供追番参考 · 页面信息整理于 2026 年 11 月 7 日</div>
+  </div>
+</footer>
+
+</body>
+        </html>
